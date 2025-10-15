@@ -1,0 +1,17 @@
+- type: damageType
+  id: Compression
+  name: Compression
+  armorCoefficientPrice: 1
+  armorFlatPrice: 1
+
+- type: damageType
+  id: Psy
+  name: Psy
+  armorCoefficientPrice: 1
+  armorFlatPrice: 1
+
+- type: damageType
+  id: Mutant
+  name: Mutant
+  armorCoefficientPrice: 1
+  armorFlatPrice: 1

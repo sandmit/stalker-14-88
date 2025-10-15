@@ -1,0 +1,422 @@
+# Base Band Teleport Please dot`t touch it - Start
+- type: entity
+  id: BandRepositoryBase
+  abstract: true
+  components:
+    - type: Transform
+      anchored: True
+    - type: InteractionOutline
+    - type: Clickable
+    - type: Physics
+      bodyType: Static
+    - type: Sprite
+      layers:
+      - state: t2
+      scale: 0.7, 0.7
+      sprite: _Stalker/Objects/Other/teleport.rsi
+    - type: Fixtures
+      fixtures:
+        portalFixture:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.25,-0.48,0.25,0.48"
+          mask:
+            - FullTileMask
+          layer:
+            - TableLayer
+          hard: false
+    - type: StalkerBandTeleport
+      portalName: _StalkerBandTeleport
+      repositoryWeight: 0
+    - type: PointLight
+      color: Yellow
+      radius: 3
+      energy: 1
+      netsync: false
+# Base Band Teleport Please dot`t touch it - End
+
+# Repository for FreedomBand - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandFreedomRepository
+  suffix: 1000
+  name: Band-Freedom-Repository
+  description: Band-Freedom-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Freedom"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandFreedomRepository
+      repositoryWeight: 1000
+
+
+# Repository for Serafim - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandSerafimRepository
+  suffix: 1000
+  name: Band-Serafim-Repository
+  description: Подвал охотников... Пфф, ничего интересного...
+  components:
+    - type: AccessReader
+      access: [["Seraphims"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandSerafimRepository
+      repositoryWeight: 1000
+
+# Repository for Serafim - End
+
+# Repository for DebtBand - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandDebtRepository
+  suffix: 1000
+  name: Band-Debt-Repository
+  description: Band-Debt-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Dolg"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandDebtRepository
+      repositoryWeight: 1000
+
+# Repository for DebtBand - End
+
+# Repository for RenegadesBand - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandRenegadesRepository
+  suffix: 1000
+  name: Band-Renegades-Repository
+  description: Band-Renegades-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Renegat"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandRenegadesRepository
+      repositoryWeight: 1000
+
+
+# Repository for RenegadesBand - End
+
+# Repository for Military - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandMilitaryRepository
+  suffix: 1000
+  name: Band-Military-Repository
+  description: Band-Military-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Military"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandMilitaryRepository
+      repositoryWeight: 1000
+
+# Repository for Military - End
+
+# Repository for Jabs - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandJabaRepository
+  suffix: 1000
+  name: Band-Jaba-Repository
+  description: Подвал гениев крафтов... Не может быть! Там-...
+  components:
+    - type: AccessReader
+      access: [["Jaba"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandJabaRepository
+      repositoryWeight: 1000
+
+# Repository for Jabs - End
+
+# Repository for s - Start
+
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandsRepository
+  suffix: 1000
+  name: Band-s-Repository
+  description: Band-s-Repository-desc
+  components:
+    - type: StalkerBandTeleport
+      portalName: _PortalBandsRepository
+      repositoryWeight: 1000
+
+# Repository for s - End
+
+# Repository for Research Institutes - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandResearchInstitutesRepository-Kordon
+  suffix: Кордон
+  name: Band-ResearchInstitutes-Repository
+  description: Band-ResearchInstitutes-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["SciBase"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandResearchInstitutesRepository-Kordon
+      repositoryWeight: 500
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandResearchInstitutesRepository
+  suffix: 500
+  name: Band-ResearchInstitutes-Repository
+  description: Band-ResearchInstitutes-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["SciBase"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandResearchInstitutesRepository
+      repositoryWeight: 500
+
+# Repository for Research Institutes - End
+
+# Repository for Covenant - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandCovenantRepository
+  suffix: 1000
+  name: Band-Covenant-Repository
+  description: Band-Covenant-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Covenant"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandCovenantRepository
+      repositoryWeight: 1000
+
+# Repository for Covenant - End
+
+# Repository for Bandits - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandBanditsRepository
+  suffix: 1000
+  name: Band-Bandits-Repository
+  description: Band-Bandits-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Bandit"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandBanditsRepository
+      repositoryWeight: 1000
+
+# Repository for Bandits - End
+
+# Repository for Sin - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandSinRepository
+  suffix: 1000
+  name: Band-Sin-Repository
+  description: Band-Sin-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Greh"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandSinRepository
+      repositoryWeight: 1000
+
+# Repository for Sin - End
+
+# Repository for Clearsky - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandClearskyRepository
+  suffix: 1000
+  name: Band-Clearsky-Repository
+  description: Band-Clearsky-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["CN"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandClearskyRepository
+      repositoryWeight: 1000
+
+# Repository for Clearsky - End
+
+# Repository for Mercenaries - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandMercenariesRepository
+  suffix: 1000
+  name: Band-Mercenaries-Repository
+  description: Band-Mercenaries-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Merc"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandMercenariesRepository
+      repositoryWeight: 1000
+
+# Repository for Mercenaries - End
+
+# Repository for UN - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandUNRepository
+  suffix: 1000
+  name: Band-UN-Repository
+  description: Band-UN-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Military"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandUNRepository
+      repositoryWeight: 1000
+
+# Repository for UN - End
+
+# Repository for Anomalist - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandAnomalistRepository
+  suffix: 1000
+  name: Band-Anomalist-Repository
+  description: Band-Anomalist-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["Anomalist"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandAnomalistRepository
+      repositoryWeight: 1000
+
+# Repository for Anomalist - End
+
+# Repository for MilitaryStalker - Start
+
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandMilitaryStalkerRepository
+  suffix: 1000
+  name: Band-MilitaryStalker-Repository
+  description: Band-MilitaryStalker-Repository-desc
+  components:
+    - type: AccessReader
+      access: [["MilitaryStalker"]]
+    - type: StalkerBandTeleport
+      portalName: _PortalBandMilitaryStalkerRepository
+      repositoryWeight: 1000
+
+# Repository for MilitaryStalker - End
+
+# Repository for Neutrals - Start
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandNeutralsRepository
+  suffix: 1000
+  name: Band-Neutrals-Repository
+  description: Band-MilitaryStalker-Repository-desc
+  components:
+  - type: AccessReader
+    access: [["Neutral"]]
+  - type: StalkerBandTeleport
+    portalName: _PortalBandNeutralsRepository
+    repositoryWeight: 1000
+# Repository for Neutrals - End
+
+# Repository for Poisk - Start
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandPoiskRepository
+  suffix: 1000
+  name: Band-Poisk-Repository
+  description: Band-MilitaryStalker-Repository-desc
+  components:
+  - type: AccessReader
+    access: [["Poisk"]]
+  - type: StalkerBandTeleport
+    portalName: _PortalBandPoiskRepository
+    repositoryWeight: 1000
+# Repository for Poisk - End
+
+# Repository for Monolith - Start
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandMonolithRepository
+  suffix: 150
+  noSpawn: false
+  name: Band-Monolith-Repository
+  description: Band-MilitaryStalker-Repository-desc
+  components:
+  - type: AccessReader
+    access: [["Monolith"]]
+  - type: StalkerBandTeleport
+    portalName: _PortalBandMonolithRepository
+    repositoryWeight: 500
+# Repository for Monolith - End
+
+# Repository for Project - Start
+- type: entity
+  parent: BandRepositoryBase
+  id: PortalBandProjectRepository
+  suffix: 2000
+  name: Band-Project-Repository
+  description: Band-MilitaryStalker-Repository-desc
+  components:
+  - type: StalkerBandTeleport
+    portalName: _PortalBandProjectRepository
+    repositoryWeight: 2000
+# Repository for Project - End
+
+# BandPrototype
+- type: bandLoader
+  id: BandLoaderBase
+  bandTeleports:
+    - "_PortalBandMilitaryStalkerRepository"
+
+    - "_PortalBandAnomalistRepository"
+
+    - "_PortalBandUNRepository"
+
+    - "_PortalBandMercenariesRepository"
+
+    - "_PortalBandClearskyRepository"
+
+    - "_PortalBandSinRepository"
+
+    - "_PortalBandBanditsRepository"
+
+    - "_PortalBandCovenantRepository"
+
+    - "_PortalBandResearchInstitutesRepository"
+
+    - "_PortalBandResearchInstitutesRepository-Kordon"
+
+    - "_PortalBandMilitaryRepository"
+
+    - "_PortalBandsRepository"
+
+    - "_PortalBandRenegadesRepository"
+
+    - "_PortalBandDebtRepository"
+
+    - "_PortalBandFreedomRepository"
+
+    - "_PortalBandNeutralsRepository"
+    - "_PortalBandPoiskRepository"
+    - "_PortalBandProjectRepository"
+
+    - "_PortalBandJabaRepository"
+    - "_PortalBandSerafimRepository"
+
+    - "_PortalBandMonolithRepository"

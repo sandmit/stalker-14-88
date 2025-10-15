@@ -1,0 +1,52 @@
+- type: job
+  id: StalkerRene
+  name: job-renegade
+  icon: rene
+  description: job-renegade-desc
+  playTimeTracker: JobRenegat
+  whitelisted: true
+  requirements:
+    # - !type:RoleTimeRequirement
+    #   role: JobRenegat
+    #   time: 1
+    - !type:SpeciesRequirement
+      species:
+      - Human
+      - Dwarf
+  startingGear: ReneGear
+  supervisors: job-renegade-supervisor
+  canBeAntag: false
+  special:
+    - !type:AddComponentSpecial
+      components:
+        - type: Access
+          tags:
+            - Renegat
+        - type: Bands
+          band: Stalker
+          bandIcon: rene
+          bandProto: STRenegatsBand
+          bandRankId: 2
+        - type: BlockTackingHolyItems
+        - type: NpcFactionMember
+          factions:
+          - BandsUnion
+
+- type: startingGear
+  id: ReneGear
+  equipment:
+    id: BandPDA
+    head: ClothingHeadHatGreyFlatcap
+    torso: ClothingTorsoTShirtColorBlack
+    legs: ClothingLegsJeansBlue
+    shoes: ClothingShoesBootsWork
+    back: ClothingBackpackDuffelBlackStalker
+- type: stBand
+  id: STRenegatsBand
+  name: Renegats
+  factionId: Bandit
+  maxMembers: 12
+  managingRankId: 3
+  hierarchy:
+    1: StalkerRene
+

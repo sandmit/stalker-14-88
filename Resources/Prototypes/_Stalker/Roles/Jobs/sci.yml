@@ -1,0 +1,135 @@
+- type: job
+  id: StalkerScientist
+  name: job-scientist
+  icon: sci
+  description: job-scientist-desc
+  playTimeTracker: JobStalkerSci
+  whitelisted: true
+  requirements:
+    # - !type:RoleTimeRequirement
+    #   role: JobStalkerSci
+    #   time: 1
+    - !type:SpeciesRequirement
+      species:
+      - Human
+      - Dwarf
+  startingGear: SciGear
+  supervisors: job-scientist-supervisor
+  canBeAntag: false
+  special:
+    - !type:AddComponentSpecial
+      components:
+      - type: Access
+        groups:
+          - Sci
+      - type: Bands
+        band: Stalker
+        bandIcon: sci
+        bandProto: STSciBand
+        bandRankId: 2
+      - type: BlockTackingHolyItems
+      - type: TeethPull
+        teethProto: ToothStalker
+        pullingItemTag: PliersStalker
+        teethCount: 3
+        initialTeeth: 3
+      - type: NpcFactionMember
+        factions:
+        - Sci
+
+- type: job
+  id: StalkerISSG
+  name: job-issg
+  icon: ecologists
+  description: job-issg-desc
+  playTimeTracker: JobStalkerISSG
+  whitelisted: true
+  requirements:
+    # - !type:RoleTimeRequirement
+    #   role: JobStalkerSci
+    #   time: 1
+    - !type:SpeciesRequirement
+      species:
+      - Human
+      - Dwarf
+  startingGear: SciGear
+  supervisors: job-scientist-supervisor
+  canBeAntag: false
+  special:
+    - !type:AddComponentSpecial
+      components:
+      - type: Access
+        groups:
+          - Sci
+      - type: Bands
+        band: Stalker
+        bandIcon: ecologists
+        bandProto: STSciBand
+        bandRankId: 2
+      - type: BlockTackingHolyItems
+      - type: TeethPull
+        teethProto: ToothStalker
+        pullingItemTag: PliersStalker
+        teethCount: 3
+        initialTeeth: 3
+      - type: NpcFactionMember
+        factions:
+        - Sci
+
+- type: job
+  id: StalkerHeadScientist
+  name: job-head-scientist
+  icon: sci
+  description: job-head-scientist-desc
+  playTimeTracker: JobHeadStalkerSci
+  whitelisted: true
+  requirements:
+    # - !type:RoleTimeRequirement
+    #   role: JobHeadStalkerSci
+    #   time: 1
+    - !type:SpeciesRequirement
+      species:
+      - Human
+      - Dwarf
+  startingGear: SciGear
+  supervisors: job-scientist-supervisor
+  canBeAntag: false
+  special:
+    - !type:AddComponentSpecial
+      components:
+        - type: Access
+          groups:
+            - SciHead
+        - type: Bands
+          band: Stalker
+          bandIcon: sci
+          bandProto: STSciBand
+          bandRankId: 2
+        - type: BlockTackingHolyItems
+        - type: TeethPull
+          teethProto: ToothStalker
+          pullingItemTag: PliersStalker
+          teethCount: 3
+          initialTeeth: 3
+        - type: NpcFactionMember
+          factions:
+          - Sci
+
+- type: startingGear
+  id: SciGear
+  equipment:
+    id: ScientistPDA
+    legs: ClothingLegsJeansSandCargo
+    shoes: STClothingShoesBootsCombatFilled
+    torso: ClothingTorsoShirtWhiteScientific
+- type: stBand
+  id: STSciBand
+  name: Scientists
+  factionId: Scientists
+  maxMembers: 20
+  managingRankId: 3
+  hierarchy:
+    1: StalkerScientist
+    2: StalkerISSG
+    3: StalkerHeadScientist
+

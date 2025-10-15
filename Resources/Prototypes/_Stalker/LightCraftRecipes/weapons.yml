@@ -1,0 +1,9 @@
+- type: lightCraftingRecipe
+  id: LightCraftSawedOff
+  results:
+  - STWeaponShotgunSawedOf
+  steps:
+    firstIngredient: CraftSaw
+    secondIngredient: STWeaponShotgunTOZ34
+    keepFirst: true
+    time: 5

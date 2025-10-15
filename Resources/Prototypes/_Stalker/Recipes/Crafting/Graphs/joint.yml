@@ -1,0 +1,13 @@
+- type: constructionGraph
+  id: Joint
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: jointend
+      steps:
+      - material: PaperRolling
+      - material: GroundCannabis
+        doAfter: 2
+  - node: jointend
+    entity: Joint

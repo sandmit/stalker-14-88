@@ -1,0 +1,55 @@
+- type: job
+  id: StalkerClearSky
+  name: job-clearsky
+  icon: cn
+  description: job-clearsky-desc
+  playTimeTracker: JobClearSky
+  whitelisted: true
+  requirements:
+    # - !type:RoleTimeRequirement
+    #   role: JobClearSky
+    #   time: 1
+    - !type:SpeciesRequirement
+      species:
+      - Human
+      - Dwarf
+  startingGear: StalkerClearSkyGear
+  supervisors: job-clearsky-supervisor
+  canBeAntag: false
+  special:
+    - !type:AddComponentSpecial
+      components:
+      - type: Access
+        tags:
+          - CN
+      - type: Bands
+        band: Stalker
+        bandIcon: cn
+        bandProto: STClearSkyBand
+        bandRankId: 2
+      - type: BlockTackingHolyItems
+      - type: TeethPull
+        teethProto: ToothStalker
+        pullingItemTag: PliersStalker
+        teethCount: 3
+        initialTeeth: 3
+
+- type: startingGear
+  id: StalkerClearSkyGear
+  equipment:
+    id: ClearSkyPDA
+    belt: ClothingBeltStorageWaistbag
+    torso: ClothingTorsoSweaterStalkerGreen
+    legs: ClothingLegsJeansBlue
+    shoes: ClothingShoesBootsWork
+    outerClothing: ClothingOuterCoatBomber
+    back: ClothingBackpackDuffelBlackStalker
+- type: stBand
+  id: STClearSkyBand
+  name: Clear Sky
+  factionId: ClearSky
+  maxMembers: 10
+  managingRankId: 2
+  hierarchy:
+    1: StalkerClearSky
+

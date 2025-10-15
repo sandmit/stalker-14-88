@@ -1,0 +1,7 @@
+- type: accessLevel
+  id: Bandit
+  name: Бандиты
+
+- type: accessLevel
+  id: BanditHead
+  name: Пахан

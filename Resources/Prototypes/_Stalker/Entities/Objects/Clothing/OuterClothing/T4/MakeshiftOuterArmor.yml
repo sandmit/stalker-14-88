@@ -1,0 +1,53 @@
+- type: entity
+  parent: STClothingOuterArmorStorageBasic
+  id: ClothingOuterArmorStalkerCombat
+  name: Бронекостюм «Пионер»
+  description: Кустарная броня с полным комплексом защиты для уверенных в себе комбатантов.
+  suffix: ST, T4, Universal
+  components:
+  - type: STWeight
+    self: 16
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/outerClothing/makeshift_armor.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/outerClothing/makeshift_armor.rsi
+  - type: Armor
+    armorClass: 4
+    modifiers:
+      flatReductions:
+        Blunt: 5
+        Slash: 5
+        Piercing: 6
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.7
+        Heat: 0.7
+        Radiation: 0.6
+        Caustic: 0.7
+        Shock: 0.7
+        Compression: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+
+# Clear Sky - 1
+
+- type: entity
+  parent: ClothingOuterArmorStalkerCombat
+  id: ClothingOuterArmorStalkerCombatCN
+  name: БронеКостюм 'TVM-12'
+  description: Кустарная броня с полным комплексом защиты для уверенных в себе комбатантов.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/outerClothing/tvm-12.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/outerClothing/tvm-12.rsi
+  - type: Armor
+    armorLevels:
+      environment: 3
+      piercing: -1
+  - type: Storage
+    maxItemsize: Large
+    grid:
+      - 0,0,2,2
+      - 4,0,4,2

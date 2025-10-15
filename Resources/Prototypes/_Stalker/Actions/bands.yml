@@ -1,0 +1,10 @@
+- type: entity
+  id: ActionChangeBand
+  name: сменить нашивку
+  description: Позволяет менять нашивку (значок или шеврон) на своем персонаже. Вы можете выбрать разные нашивки, чтобы подчеркнуть стиль или добиться желаемого внешнего вида своего героя.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: InstantAction
+      checkCanInteract: false
+      icon: _Stalker/Interface/Actions/patch.rsi/switch_patch.png
+      event: !type:ChangeBandEvent

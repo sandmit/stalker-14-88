@@ -1,0 +1,15 @@
+ent-STClothingOuterArmorHeavyPlateVestBase = тяжёлый бронежилет
+    .suffix = ST, T5, PvP
+    .desc = тяжёлый бронежилет
+ent-STClothingOuterArmorLightPlateVestBaseHeavyMilitary = Военный Бронежилет «Цитадель»
+    .desc = Тяжёлый бронежилет V типа, обеспечивающий достойную защиту от большинства видов повреждений.
+ent-STClothingOuterArmorLightPlateVestBaseHeavyMonolith = Бронежилет «Цитадель» монолита
+    .desc = Тяжёлый бронежилет V типа, обеспечивающий достойную защиту от большинства видов повреждений.
+ent-STClothingOuterArmorLightPlateVestBaseHeavyBandit = Бандитский Бронежилет «Цитадель»
+    .desc = Стыренный и перекрашенный мусорской тяжёлый бронежилет V типа, обеспечивающий достойную защиту от большинства видов повреждений.
+ent-ClothingOuterArmorHeavyJaba = Бронежилет «Цитадель» жаб
+    .desc = Тяжёлый бронежилет IV типа, обеспечивающий достаточную защиту от физического урона.
+ent-ClothingOuterArmorHeavyUNTAR = Бронежилет UNTAR-H
+    .desc = Тяжёлый бронежилет V типа, обеспечивающий достойную защиту от большинства видов повреждений.
+ent-ClothingOuterArmorHeavyDebt = Бронежилет «Цитадель» Авангарда
+    .desc = тяжёлый бронежилет V типа, улучшенный умельцами Авангарда, специально для тяжёлых стычек между группировками.
