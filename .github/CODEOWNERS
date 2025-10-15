@@ -25,6 +25,10 @@
 /Resources/Prototypes/Entities/Mobs/Player/ @DrSmugleaf
 /Resources/Prototypes/Entities/Mobs/Species/ @DrSmugleaf
 /Resources/Prototypes/Guidebook/rules.yml @Chief-Engineer
+/Content.*/Body/ @DrSmugleaf
+/Content.YAMLLinter @DrSmugleaf
+/Content.Shared/Damage/ @DrSmugleaf
+
 /Content.*/Anomaly/ @EmoGarbage404 @TheShuEd
 /Content.*/Lathe/ @EmoGarbage404
 /Content.*/Materials/ @EmoGarbage404
